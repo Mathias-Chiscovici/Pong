@@ -8,8 +8,17 @@ public class Ball {
 	private int x;
 	private int y;
 	private boolean direction; // true = towards right, false = towards left
-	private static int size = (int) ((GameWindow.getySize() / GameWindow.getxSize()) * 10);
+	private final static int size = (int) ((GameWindow.getySize() / GameWindow.getxSize()) * 10);
 	private Color color = Settings.getEnititiesColor();
+	private  int speed = 3;
+
+	public int getSpeed() {
+		return speed;
+	}
+
+	public void setSpeed(int speed) {
+		this.speed = speed;
+	}
 
 	public int getX() {
 		return x;

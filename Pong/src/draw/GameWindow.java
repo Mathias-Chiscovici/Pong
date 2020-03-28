@@ -66,7 +66,6 @@ public class GameWindow {
 		window.getContentPane().setBackground(new Color(Settings.getBgColor().getR(), Settings.getBgColor().getG(), Settings.getBgColor().getB()));
 		window.setVisible(true);
 		window.setResizable(false);
-		// this.drawRacket.paintComponent(g);
 
 		while (true) {
 			window.add(drawBall);
