@@ -14,5 +14,6 @@ public class MainTest {
 		GameWindow gw = GameWindowSingleton.getInstance();
 		
 		gw.paint();
+		//ciao
 	}
 }
