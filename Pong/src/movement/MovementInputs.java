@@ -10,11 +10,11 @@ import javax.swing.JFrame;
 import javax.swing.Timer;
 
 import draw.DrawBall;
-import draw.DrawRacket;
+import draw.DrawPaddle;
 import draw.GameWindow;
-import entities.Racket;
+import entities.Paddle;
 import singleton.DrawBallSingleton;
-import singleton.DrawRacketSingleton;
+import singleton.DrawPaddleSingleton;
 import singleton.GameWindowSingleton;
 
 public class MovementInputs implements KeyListener, Runnable {
@@ -28,16 +28,15 @@ public class MovementInputs implements KeyListener, Runnable {
 
 	@Override
 	public void keyPressed(KeyEvent e) {
-		DrawRacket dr = DrawRacketSingleton.getInstance();
+		DrawPaddle dr = DrawPaddleSingleton.getInstance();
 		DrawBall db = DrawBallSingleton.getInstance();
+		GameWindow gw = GameWindowSingleton.getInstance();
 
-		if (e.getKeyCode() == up && dr.getRacket().getY() > 0) {
-			dr.getRacket().setY(dr.getRacket().getY() - 10);
-		} else if (e.getKeyCode() == down && dr.getRacket().getY() < (GameWindow.getWindow().getContentPane().getHeight() - Racket.getRacketSizeY())) {
-			dr.getRacket().setY(dr.getRacket().getY() + 10);
+		if (e.getKeyCode() == up && dr.getPaddle().getY() > 0) {
+			dr.getPaddle().setY(dr.getPaddle().getY() - 10);
+		} else if (e.getKeyCode() == down && dr.getPaddle().getY() < (gw.getHeight() - Paddle.getRacketSizeY())) {
+			dr.getPaddle().setY(dr.getPaddle().getY() + 10);
 		}
-		db.repaint();
-		dr.repaint();
 	}
 
 	@Override

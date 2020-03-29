@@ -1,12 +1,14 @@
 package entities;
 
-import draw.GameWindow;
+import java.awt.Color;
 
-public class Racket {
+import drawOld.GameWindow;
+
+public class Paddle {
 	private int y = (GameWindow.getySize() / 2) - racketSizeY;
 	private static final int racketSizeY = (int) GameWindow.getySize() / 7;
 	private static final int racketSizeX = (int) GameWindow.getxSize() / 70;
-	private Color color = Settings.getEnititiesColor();
+	private Color color = Settings.getEntitiesColor();
 
 	public int getY() {
 		return y;

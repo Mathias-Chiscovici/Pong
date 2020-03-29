@@ -1,12 +1,12 @@
 package entities;
 
+import java.awt.Color;
 import java.awt.color.*;
 
-import singleton.ColorSingleton;
 
 public class Settings {
-	private static Color bgColor = ColorSingleton.getInstance(0, 0, 0);
-	private static Color enititiesColor = ColorSingleton.getInstance(255, 255, 255);
+	private static Color bgColor = new Color(0,0,0);
+	private static Color entitiesColor = new Color(255,255,255);
 	
 	public static Color getBgColor() {
 		return bgColor;
@@ -16,17 +16,17 @@ public class Settings {
 		this.bgColor = bgColor;
 	}
 
-	public static Color getEnititiesColor() {
-		return enititiesColor;
+	public static Color getEntitiesColor() {
+		return entitiesColor;
 	}
 
-	public void setEnititiesColor(Color enititiesColor) {
-		this.enititiesColor = enititiesColor;
+	public void setEnititiesColor(Color entitiesColor) {
+		this.entitiesColor = entitiesColor;
 	}
 
 	@Override
 	public String toString() {
-		return "Settings [bgColor=" + bgColor + ", enititiesColor=" + enititiesColor + "]";
+		return "Settings [bgColor=" + bgColor + ", entitiesColor=" + entitiesColor + "]";
 	}
 
 }

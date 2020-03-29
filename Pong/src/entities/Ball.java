@@ -1,15 +1,17 @@
 package entities;
 
+import java.awt.Color;
 import java.util.Random;
 
-import draw.GameWindow;
+import drawOld.GameWindow;
 
 public class Ball {
-	private int x;
-	private int y;
-	private boolean direction; // true = towards right, false = towards left
+	private Random r = new Random();
+	private int x = GameWindow.getxSize() / 2;
+	private int y = GameWindow.getySize() / 2;
+	private boolean direction = r.nextBoolean(); // true = towards right, false = towards left
 	private final static int size = (int) ((GameWindow.getySize() / GameWindow.getxSize()) * 10);
-	private Color color = Settings.getEnititiesColor();
+	private Color color = Settings.getEntitiesColor();
 	private  int speed = 3;
 
 	public int getSpeed() {
@@ -55,17 +57,9 @@ public class Ball {
 	public void setColor(Color color) {
 		this.color = color;
 	}
-
 	@Override
 
 	public String toString() {
 		return "Ball [x=" + x + ", y=" + y + ", direction=" + direction + ", color=" + color + "]";
-	}
-
-	public Ball() {
-		Random r = new Random();
-		this.direction = r.nextBoolean();
-		this.x = GameWindow.getxSize() / 2;
-		this.y = GameWindow.getySize() / 2;
 	}
 }
