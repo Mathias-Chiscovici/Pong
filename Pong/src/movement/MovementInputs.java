@@ -17,10 +17,9 @@ import singleton.DrawBallSingleton;
 import singleton.DrawPaddleSingleton;
 import singleton.GameWindowSingleton;
 
-public class MovementInputs implements KeyListener, Runnable {
+public class MovementInputs implements KeyListener {
 	private static final int up = (int) KeyboardInputsENUM.UP.VK;
 	private static final int down = (int) KeyboardInputsENUM.DOWN.VK;
-	private Thread t = new Thread(this);
 
 	@Override
 	public void keyTyped(KeyEvent e) {
@@ -42,6 +41,4 @@ public class MovementInputs implements KeyListener, Runnable {
 	@Override
 	public void keyReleased(KeyEvent e) {
 	}
-
-
 }
