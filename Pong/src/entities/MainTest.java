@@ -15,5 +15,6 @@ public class MainTest {
 		GameWindow gw = GameWindowSingleton.getInstance();
 		
 		GameWindow.createAndShowGui();
+		//ciao
 	}
 }
