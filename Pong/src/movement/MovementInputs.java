@@ -43,20 +43,5 @@ public class MovementInputs implements KeyListener, Runnable {
 	public void keyReleased(KeyEvent e) {
 	}
 
-	@Override
-	public void run() {
-		GameWindow.getWindow().addKeyListener(this);
-	}
-
-	public void mThread() {
-
-		this.run();
-		try {
-			t.wait(10);
-		} catch (InterruptedException e1) {
-			e1.printStackTrace();
-		}
-		t.start();
-	}
 
 }
